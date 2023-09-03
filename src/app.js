@@ -99,17 +99,23 @@ function App() {
                   onKeyPress={handleKeyPress}
                   placeholder="Enter Colour Code"
                 />
+                <p>or</p>
+                <input
+                  ref={searchInputRef}
+                  onKeyPress={handleKeyPress}
+                  type="color"
+                />
                 <button type="submit">
                   <img src={SearchIcon} alt="Search Icon" />
                 </button>
               </div>
-              <p>Write Code in HEX or RGB</p>
+              <p>HEX or RGB</p>
             </form>
           </div>
         </>
 
         {isLoading ? (
-          <div className="loader">Loading...</div>
+          <h2 className="loader">Loading...</h2>
         ) : (
           <>
             {colors.length === 0 ? (
